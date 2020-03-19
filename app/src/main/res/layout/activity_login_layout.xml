@@ -12,38 +12,45 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_16dp"
+        android:layout_marginBottom="160dp"
         android:fontFamily="@font/adamina"
         android:text="@string/login_title"
         android:textAlignment="center"
         android:textColor="#ffffff"
-        android:textStyle="bold"
         android:textSize="@dimen/dimen_24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        style="@style/edittextStyle"
-        android:id="@+id/username_edittext"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_guideline"
         android:layout_width="0dp"
-        android:layout_height="34dp"
-        android:layout_margin="16dp"
-        android:layout_marginTop="312dp"
-        android:ems="10"
-        android:hint="Username"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_title_textview" />
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".65" />
 
     <EditText
+        android:id="@+id/username_edittext"
         style="@style/edittextStyle"
-        android:id="@+id/password_edittext"
         android:layout_width="0dp"
         android:layout_height="34dp"
         android:layout_margin="16dp"
-        android:layout_marginTop="132dp"
+        android:ems="10"
+        android:hint="Username"
+        android:padding="8dp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_guideline" />
+
+    <EditText
+        android:id="@+id/password_edittext"
+        style="@style/edittextStyle"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:layout_margin="16dp"
+        android:padding="8dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -52,8 +59,8 @@
         app:layout_constraintTop_toBottomOf="@+id/username_edittext" />
 
     <Button
-        style="@style/AppButton"
         android:id="@+id/login_button"
+        style="@style/AppButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"

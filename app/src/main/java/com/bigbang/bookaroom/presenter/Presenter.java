@@ -1,6 +1,8 @@
 package com.bigbang.bookaroom.presenter;
 
 
+import android.util.Log;
+
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
@@ -32,22 +34,19 @@ public class Presenter implements Contract.Presenter {
         currentUser = reservationDB.getUserDAO().loginSelect(userName, userPassword);
         if(currentUser == null){
             mainView.userLoginFailed();
-        }else{
+        }else {
             mainView.userLoginSuccess();
         }
-
     }
 
     @Override
     public void signOutUser() {
-        currentUser = null;
-        mainView.userLoggedOut();
 
     }
 
     @Override
     public UserEntity getUserInstance() {
-        return currentUser;
+        return null;
     }
 
     @Override
@@ -55,3 +54,4 @@ public class Presenter implements Contract.Presenter {
 
     }
 }
+

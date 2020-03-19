@@ -16,6 +16,9 @@ public class GuestEntity {
     @ColumnInfo(name = "lastName")
     private String lastName;
 
+    @ColumnInfo(name = "date")
+    private String checkInDate;
+
     public GuestEntity(long guestID, String firstName, String lastName) {
         this.guestID = guestID;
         this.firstName = firstName;

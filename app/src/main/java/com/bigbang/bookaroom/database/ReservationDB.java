@@ -3,7 +3,6 @@ package com.bigbang.bookaroom.database;
 import androidx.room.Database;
 import androidx.room.RoomDatabase;
 
-import com.bigbang.bookaroom.model.BookingsEntity;
 import com.bigbang.bookaroom.model.GuestEntity;
 
 @Database(version = 1, entities = {UserEntity.class, GuestEntity.class, HotelRoomEntity.class, BookingsEntity.class})

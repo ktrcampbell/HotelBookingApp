@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.ContextThemeWrapper;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -42,7 +43,10 @@ public class LoginActivity extends AppCompatActivity implements Contract.View {
         String name = usernameEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
 
-        mainPresenter.logInUser(name, password);
+        mainPresenter.loginUser(name, password);
+
+        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+        startActivity(intent);
     }
 
     @Override

@@ -6,7 +6,8 @@ public interface Contract {
 
     public interface Presenter{
 
-        void loginUser();
+        void loginUser(String userName, String userPassword);
+
 
         void signOutUser();
 
