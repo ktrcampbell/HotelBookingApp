@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BookARoom</string>
+    <string name="login_title">Welcome to the Reservation Book</string>
+</resources>
